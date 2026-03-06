@@ -1,0 +1,242 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+.header{
+    width:100%;
+    min-height:100vh;
+
+    /* Keep a slightly bright overlay to make it modern */
+    background-image: 
+        url("https://ipubuzz.com/wp-content/uploads/2020/10/kcc-institute-of-technology-and-management-kcc-itm-greater-noida.jpg");
+
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+/* BODY SECTION (Life at KCC) */
+.body{
+    background: linear-gradient(135deg, #bd1f36, #e63946),
+url(https://ipubuzz.com/wp-content/uploads/2020/10/kcc-institute-of-technology-and-management-kcc-itm-greater-noida.jpg);
+
+    ; /* classy red gradient */
+    padding:120px 60px;
+    text-align:center;
+    min-height:80vh;
+}
+
+.body h1{
+    font-size:60px;
+    color:white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+/* LOGO IMAGE */
+nav img{
+width:120px;
+}
+
+/* MENU */
+.menu{
+display:flex;
+gap:15px;
+}
+
+/* MENU ITEMS */
+.menu li{
+position:relative;
+list-style:none;
+}
+
+/* LINKS */
+.menu li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+padding:8px 14px;
+transition:0.3s;
+}
+
+/* HOVER EFFECT */
+.menu li a:hover{
+transform:scale(1.15);
+background:white;
+color:rgb(201,25,25);
+border-radius:6px;
+}
+
+/* DROPDOWN MENU */
+.dropdown{
+position:absolute;
+top:40px;
+left:0;
+display:none;
+flex-direction:column;
+background:white;
+padding:10px 0;
+border-radius:6px;
+min-width:160px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+animation:dropdownFade 0.3s ease;
+}
+
+.dropdown li{
+padding:5px 15px;
+}
+
+.dropdown li a{
+color:black;
+}
+
+/* SHOW DROPDOWN */
+.menu li:hover .dropdown{
+display:flex;
+}
+
+/* DROPDOWN ANIMATION */
+@keyframes dropdownFade{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* CENTER TEXT */
+.logo{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+}
+
+/* KCC TEXT */
+.logo h2{
+font-size:110px;
+color:maroon;
+letter-spacing:12px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-weight:200;
+
+animation:zoomtext 3s ease-out forwards;
+}
+
+/* HERO BODY */
+.body{
+background-image:url(https://static.vecteezy.com/system/resources/previews/010/217/733/original/modern-dark-red-background-with-texture-effect-overlap-layer-design-vector.jpg);
+background-size:cover;
+background-position:center;
+padding:120px 60px;
+text-align:center;
+}
+
+.body h1{
+font-size:60px;
+color:white;
+}
+
+.section{
+    padding:80px 60px;
+
+    /* Red gradient + glass blur effect */
+    background: linear-gradient(135deg, #bd1f36, #e63946),
+    url("https://static.vecteezy.com/system/resources/previews/010/217/733/original/modern-dark-red-background-with-texture-effect-overlap-layer-design-vector.jpg");
+;
+background-size:cover;
+    background-position:center;
+    backdrop-filter:blur(4px);
+}
+.section h2{
+    color:rgb(56, 1, 1);
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+    animation:fadeInUp 1s ease forwards;
+    opacity:0;
+}
+
+@keyframes fadeInUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+/* CARD GRID */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+.card{
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.4);
+
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card h3{
+    color:white;
+}
+.card p{
+    color:white;
+}
+
+
+.card img{
+width:100%;
+border-radius:8px;
+margin-bottom:15px;
+}
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* ANIMATION */
+@keyframes zoomtext{
+0%{
+transform:scale(0.5);
+opacity:0;
+}
+60%{
+transform:scale(1.2);
+opacity:1;
+}
+100%{
+transform:scale(1);
+}
+}
